@@ -67,17 +67,16 @@ public class MainActivity extends AppCompatActivity {
                 int nextNumber = arr[nextNumberIndex];
 
                 SpannableStringBuilder output = new SpannableStringBuilder();
-                output.append("Input Array: ");
+                output.append("Input: \n");
                 for (int i = 0; i < arr.length; i++) {
                     if (arr[i] == nextNumber) {
                         int start = output.length();
                         output.append(arr[i] + " ");
-                        output.setSpan(new StyleSpan(Typeface.BOLD), start, output.length(), Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
                     } else {
                         output.append(arr[i] + " ");
                     }
                 }
-                output.append("\nInsertion Sort (Intermediate Steps):\n");
+                output.append("\nOutput:\n");
 
                 SpannableStringBuilder initialStep = new SpannableStringBuilder();
                 for (int i = 0; i < arr.length; i++) {
